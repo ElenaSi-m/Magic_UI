@@ -32,4 +32,3 @@ def test_weak_password(driver):
         'Minimum length of this field must be equal or greater than 8 symbols. '
                                 'Leading and trailing spaces will be ignored.'
     )
-

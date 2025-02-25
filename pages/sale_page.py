@@ -11,9 +11,7 @@ class Sale(BasePage):
 
 
     def check_page_header_title_is(self, text):
-        header_title = WebDriverWait(self.driver, 10).until(
-            ec.presence_of_element_located((By.TAG_NAME, "h1"))
-        )
+        header_title = self.find((By.TAG_NAME, "h1"))
         assert header_title.text == text, f"Expected header '{text}', but got '{header_title.text}'"
 
 
@@ -24,6 +22,7 @@ class Sale(BasePage):
                                                   ' "Men’s Bargains")]'))
         )
         mens_bargains.click()
+        assert "men-sale.html" in self.driver.current_url, "Navigation to Men's Bargains failed"
 
 
     def get_products_count(self):
@@ -34,4 +33,5 @@ class Sale(BasePage):
         )
         mens_jackets.click()
         products = self.driver.find_elements(By.CSS_SELECTOR, ".product-item")
+        assert len(products) > 0, "No products found on Sale page"
         return len(products)
