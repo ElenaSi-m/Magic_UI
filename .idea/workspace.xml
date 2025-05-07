@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="560837ee-4c48-444a-b62b-e8ae357f917f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Magic_UI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Magic_UI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/base_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/customer_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/customer_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/eco_friendly_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/eco_friendly_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/locators/eco_friendly_locators.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/locators/login_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/locators/login_locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sale_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sale_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_eco_friendly_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_eco_friendly_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_sale_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_sale_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +42,7 @@
     "Python tests.Python tests for test_sale_page.test_header_title.executor": "Run",
     "Python tests.Python tests for test_sale_page.test_mens_bargains_navigation.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Magic__UI__pw",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/My documents Elena/Elena-/homework/elena_sinitsina/Magic_UI_pw",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
