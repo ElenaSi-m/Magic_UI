@@ -1,6 +1,5 @@
-from pages import eco_friendly_page
 from pages.eco_friendly_page import EcoFriendly
-from selenium.webdriver.common.by import By
+from conftest import eco_friendly_page
 
 def test_header_title(eco_friendly_page):
     eco_friendly_page.open_page()

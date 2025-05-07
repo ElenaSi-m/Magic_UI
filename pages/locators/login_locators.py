@@ -1,8 +1,8 @@
-from selenium.webdriver.common.by import By
+from playwright.sync_api import Page, Locator
 
-firstname_field_loc = (By.ID, 'firstname')
-lastname_field_loc = (By.ID, 'lastname')
-email_field_loc = (By.ID, 'email_address')
-password_field_loc = (By.ID, 'password')
-confirm_password_field_loc = (By.ID, 'password-confirmation')
-button_loc = (By.CSS_SELECTOR, 'button.action.submit.primary')
+firstname_field_loc = 'input#firstname'
+lastname_field_loc = 'input#lastname'
+email_field_loc = 'input#email_address'
+password_field_loc = 'input#password'
+confirm_password_field_loc = 'input#password-confirmation'
+button_loc = 'button.action.submit.primary'

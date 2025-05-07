@@ -1,7 +1,5 @@
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
+
 from utils import project_ec
-from selenium.webdriver.support import expected_conditions as ec
 from pages.base_page import BasePage
 from pages.locators import login_locators as loc
 
@@ -18,30 +16,28 @@ class CustomerLogin(BasePage):
         confirm_password_field = self.find(loc.confirm_password_field_loc )
         button = self.find(loc.button_loc)
 
-        firstname_field.send_keys(firstname)
-        lastname_field.send_keys(lastname)
-        email_field.send_keys(email)
-        password_field.send_keys(password)
-        confirm_password_field.send_keys(password_conf)
+        firstname_field.fill(firstname)
+        lastname_field.fill(lastname)
+        email_field.fill(email)
+        password_field.fill(password)
+        confirm_password_field.fill(password_conf)
         button.click()
 
 
     def check_error_alert_text_is(self,text):
-        error_alert = WebDriverWait(self.driver, timeout=10).until(ec.presence_of_element_located((By.ID, "email_address-error"))
-        )
-        WebDriverWait(self.driver, timeout=5).until(project_ec.text_is_not_empty_in_element(error_alert))
-        assert error_alert.text == text
+        error_alert = "#email_address-error"
+        self.page.wait_for_selector(error_alert, timeout=5000)
+        alert_text = self.page.locator(error_alert).inner_text()
+        assert alert_text == text, f"Expected '{text}', but got '{alert_text}'"
 
     def check_error_alert_incorrect_password_is(self,password):
-        error_alert = WebDriverWait(self.driver, timeout=10).until(
-            ec.presence_of_element_located((By.ID, "password-confirmation-error"))
-        )
-        WebDriverWait(self.driver, timeout=5).until(project_ec.text_is_not_empty_in_element(error_alert))
-        assert error_alert.text == password
+        error_alert = "#password-confirmation-error"
+        self.page.wait_for_selector(error_alert, timeout=5000)
+        alert_text = self.page.locator(error_alert).inner_text()
+        assert alert_text == password, f"Expected '{password}', but got '{alert_text}'"
 
     def check_error_alert_weak_password_is(self,password):
-        error_alert = WebDriverWait(self.driver, timeout=10).until(
-            ec.presence_of_element_located((By.ID, "password-error"))
-        )
-        WebDriverWait(self.driver, timeout=5).until(project_ec.text_is_not_empty_in_element(error_alert))
-        assert error_alert.text == password
+        error_alert = "#password-error"
+        self.page.wait_for_selector(error_alert, timeout=5000)
+        alert_text = self.page.locator(error_alert).inner_text()
+        assert alert_text == password, f"Expected '{password}', but got '{alert_text}'"
