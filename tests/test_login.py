@@ -1,9 +1,8 @@
-from conftest import driver
 from pages.customer_login import CustomerLogin
 
 
-def test_incorrect_email(driver):
-    login_page = CustomerLogin(driver)
+def test_incorrect_email(page):
+    login_page = CustomerLogin(page)
     login_page.open_page()
     login_page.fill_login_form(
         'Aaa',"Bb","111@11","Amari648377","Amari648377"
@@ -12,8 +11,8 @@ def test_incorrect_email(driver):
         'Please enter a valid email address (Ex: johndoe@domain.com).'
     )
 
-def test_incorrect_password(driver):
-    login_page = CustomerLogin(driver)
+def test_incorrect_password(page):
+    login_page = CustomerLogin(page)
     login_page.open_page()
     login_page.fill_login_form(
         "Aaa","Bb","123@gmail.com","Amari648377","123"
@@ -22,8 +21,8 @@ def test_incorrect_password(driver):
         'Please enter the same value again.'
     )
 
-def test_weak_password(driver):
-    login_page = CustomerLogin(driver)
+def test_weak_password(page):
+    login_page = CustomerLogin(page)
     login_page.open_page()
     login_page.fill_login_form(
         "Aaa", "Bb", "123@gmail.com", "123", "123"

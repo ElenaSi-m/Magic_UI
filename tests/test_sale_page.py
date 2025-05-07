@@ -1,6 +1,5 @@
 from pages.sale_page import Sale
-from selenium.webdriver.common.by import By
-
+from conftest import sale_page
 
 def test_header_title(sale_page):
     sale_page.open_page()
